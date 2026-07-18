@@ -3,8 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zenvyra Technologys</title>
-<link rel="icon" href="Zenvyra.jpg.png" type="image/svg+xml">
+<!-- Basic SEO -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="title" content="Zenvyra | Web Development, Student Projects & IT Solutions">
+<meta name="description" content="Zenvyra provides website development, UI/UX design, final year student projects, portfolio websites, business websites, and affordable IT solutions.">
+<meta name="keywords" content="Zenvyra, Web Development, Website Design, UI UX Design, Student Projects, Final Year Projects, Portfolio Website, Business Website, Software Development, Madurai, Tamil Nadu">
+<meta name="author" content="Zenvyra">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<meta name="theme-color" content="#6C2BD9">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://your-domain.com/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/Zenvyra.jpg.png">
+
+<!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zenvyra | Web Development & IT Solutions">
+<meta property="og:description" content="Professional website development, student projects, UI/UX design, and affordable IT solutions.">
+<meta property="og:url" content="https://your-domain.com/">
+<meta property="og:image" content="https://your-domain.com/Zenvyra.jpg.png">
+<meta property="og:site_name" content="Zenvyra">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zenvyra | Web Development & IT Solutions">
+<meta name="twitter:description" content="Website development, UI/UX, student projects, and digital solutions.">
+<meta name="twitter:image" content="https://your-domain.com/Zenvyra.jpg.png">
+
+<!-- Mobile -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<title>Zenvyra Technologys — Projects, Built & Shipped</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -60,7 +94,7 @@
   .hero-glow{position:absolute; z-index:0; border-radius:50%; filter:blur(70px); opacity:0.55; pointer-events:none;}
   .hero-glow.g1{width:420px; height:420px; top:-160px; right:-120px; background:radial-gradient(circle at 30% 30%, #2F5CED, transparent 70%);}
   .hero-glow.g2{width:300px; height:300px; bottom:-140px; left:-80px; background:radial-gradient(circle at 30% 30%, #25D366, transparent 70%); opacity:0.18;}
-  .hero-grid{position:absolute; inset:0; z-index:0; background-image:linear-gradient(to right, rgba(20,23,31,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(20,23,31,0.04) 1px, transparent 1px); background-size:44px 44px; -webkit-mask-image:radial-gradient(ellipse 900px 420px at 30% 20%, #000 40%, transparent 85%); mask-image:radial-gradient(ellipse 900px 420px at 30% 20%, #000 40%, transparent 85%);}
+  .hero-grid{position:absolute; inset:0; z-index:0; background-image:linear-gradient(to right, rgba(20,23,31,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(20,23,31,0.04) 1px, transparent 1px); background-size:44px 44px; mask-image:radial-gradient(ellipse 900px 420px at 30% 20%, #000 40%, transparent 85%);}
   .hero .wrap{position:relative; z-index:1;}
   .eyebrow{
     display:inline-flex; align-items:center; gap:8px;
@@ -146,11 +180,51 @@
 
   footer{padding:34px 0 46px;}
   .bottom-bar{display:flex; justify-content:space-between; align-items:center; font-size:0.82rem; color:var(--muted); flex-wrap:wrap; gap:12px;}
-  
-  .privacy-note{text-align:center; font-size:0.78rem; color:var(--muted); margin-top:28px;}
 
   ::selection{background:var(--accent); color:#fff;}
   @media (prefers-reduced-motion: reduce){ *{transition:none !important; animation:none !important;} }
+
+  /* modal */
+  .modal-overlay{position:fixed; inset:0; background:rgba(14,16,22,0.55); -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); display:none; align-items:center; justify-content:center; z-index:200; padding:20px;}
+  .modal-overlay.open{display:flex;}
+  .modal{background:var(--panel); border-radius:16px; width:100%; max-width:460px; max-height:88vh; overflow-y:auto; padding:32px; position:relative; box-shadow:0 30px 60px rgba(14,16,22,0.35); animation:modalIn .18s ease;}
+  @keyframes modalIn{from{opacity:0; transform:translateY(10px) scale(0.98);} to{opacity:1; transform:none;}}
+  .modal-close{position:absolute; top:18px; right:18px; width:32px; height:32px; border-radius:8px; border:1px solid var(--line); background:#fff; cursor:pointer; font-size:1rem; color:var(--muted); display:flex; align-items:center; justify-content:center;}
+  .modal-close:hover{background:var(--bg); color:var(--ink);}
+  .modal h3{font-size:1.35rem; margin-top:14px;}
+  .modal .sub{color:var(--muted); font-size:0.88rem; margin-top:6px;}
+  .field{margin-top:16px;}
+  .field label{display:block; font-size:0.8rem; font-weight:600; margin-bottom:6px; color:var(--ink);}
+  .field input,.field select,.field textarea{
+    width:100%; font-family:'Inter'; font-size:0.92rem; padding:11px 13px;
+    border:1px solid var(--line); border-radius:9px; background:#fff; color:var(--ink); outline:none;
+    transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent); box-shadow:0 0 0 3px var(--accent-ink);}
+  .field textarea{resize:vertical; min-height:70px;}
+  .modal-icon{
+    width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+    font-size:1.3rem; background:var(--accent-ink); margin-bottom:14px;
+  }
+  .modal-icon.green{background:rgba(37,211,102,0.14);}
+  .modal-eyebrow{font-family:'IBM Plex Mono'; font-size:0.72rem; color:var(--accent); background:var(--accent-ink); display:inline-block; padding:5px 12px; border-radius:999px;}
+  .modal-eyebrow.green{color:var(--wa-dark); background:rgba(37,211,102,0.14);}
+  .modal.client-theme .field input:focus,.modal.client-theme .field select:focus,.modal.client-theme .field textarea:focus{border-color:var(--wa); box-shadow:0 0 0 3px rgba(37,211,102,0.14);}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .chip-picker{display:flex; flex-wrap:wrap; gap:8px; margin-top:2px;}
+  .chip{
+    font-family:'IBM Plex Mono'; font-size:0.78rem; color:var(--muted);
+    background:#fff; border:1px solid var(--line); border-radius:8px;
+    padding:8px 14px; cursor:pointer; transition:all .15s ease;
+  }
+  .chip:hover{border-color:#c7cbd6; color:var(--ink);}
+  .chip.active{background:var(--accent); border-color:var(--accent); color:#fff;}
+  .chip-picker.green .chip.active{background:var(--wa); border-color:var(--wa); color:#fff;}
+  .chip-other-wrap{margin-top:10px; display:none;}
+  .chip-other-wrap.show{display:block;}
+  .modal-submit{width:100%; justify-content:center; margin-top:22px; padding:13px; font-size:0.94rem;}
+  .modal-note{font-size:0.74rem; color:var(--muted); text-align:center; margin-top:12px;}
+  @media (max-width:520px){ .field-row{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
@@ -164,7 +238,8 @@
       <a href="#pricing">Pricing</a>
     </nav>
     <div class="navcta">
-      <a class="btn btn-wa" href="https://wa.me/916379376791" target="_blank" rel="noopener">WhatsApp us</a>
+      <button class="btn btn-ghost" type="button" onclick="openModal('student')">Student form</button>
+      <button class="btn btn-wa" type="button" onclick="openModal('client')">Client form</button>
     </div>
   </div>
 </header>
@@ -327,7 +402,7 @@
     </div>
   </div>
   <div>
-    <p class="privacy-note">We respect your privacy. Your contact info is only used to reply to your inquiry.</p>
+    <p style="text-align:center; font-size:0.78rem; color:var(--muted); margin-top:28px;">We respect your privacy. Your contact info is only used to reply to your inquiry.</p>
 </section>
 
 <footer>
@@ -338,6 +413,236 @@
     </div>
   </div>
 </footer>
+
+<!-- Student details modal -->
+<div class="modal-overlay" id="studentOverlay">
+  <div class="modal">
+    <button class="modal-close" type="button" onclick="closeModal('student')" aria-label="Close">✕</button>
+    <div class="modal-icon">🎓</div>
+    <span class="modal-eyebrow">STUDENT PROJECT</span>
+    <h3>Tell us about your project</h3>
+    <p class="sub">Fill this in and we'll open WhatsApp with your details ready to send.</p>
+    <form id="studentForm" onsubmit="return sendToWhatsApp(event, 'student')">
+      <div class="field">
+        <label for="s-name">Full name</label>
+        <input id="s-name" type="text" placeholder="Your name" required>
+      </div>
+      <div class="field">
+        <label for="s-college">College / institution</label>
+        <input id="s-college" type="text" placeholder="e.g. Sethu Institute of Technology" required>
+      </div>
+      <div class="field">
+        <label>Department</label>
+        <div class="chip-picker" id="deptPicker">
+          <button type="button" class="chip" data-value="CSE">CSE</button>
+          <button type="button" class="chip" data-value="IT">IT</button>
+          <button type="button" class="chip" data-value="CSD">CSD</button>
+          <button type="button" class="chip" data-value="AIML">AIML</button>
+          <button type="button" class="chip" data-value="ECE">ECE</button>
+          <button type="button" class="chip" data-value="EEE">EEE</button>
+          <button type="button" class="chip" data-value="MECH">MECH</button>
+          <button type="button" class="chip" data-value="CIVIL">CIVIL</button>
+          <button type="button" class="chip" data-value="Other">Other</button>
+        </div>
+        <div class="chip-other-wrap" id="deptOtherWrap">
+          <input id="s-dept-other" type="text" placeholder="Type your department">
+        </div>
+      </div>
+      <div class="field">
+        <label>Project type</label>
+        <div class="chip-picker" id="typePicker">
+          <button type="button" class="chip" data-value="Mini project">Mini project</button>
+          <button type="button" class="chip" data-value="Final year project">Final year project</button>
+        </div>
+      </div>
+      <input type="hidden" id="s-dept" required>
+      <input type="hidden" id="s-type" required>
+      <div class="field">
+        <label for="s-topic">Project topic / idea</label>
+        <textarea id="s-topic" placeholder="What's the project about? Leave blank if you need topic suggestions." ></textarea>
+      </div>
+      <div class="field">
+        <label for="s-phone">Your WhatsApp number</label>
+        <input id="s-phone" type="tel" placeholder="e.g. 9876543210" required>
+      </div>
+      <button class="btn btn-wa modal-submit" type="submit">Send details on WhatsApp →</button>
+      <p class="modal-note">Opens WhatsApp with your details filled in — just hit send.</p>
+    </form>
+  </div>
+</div>
+
+<!-- Client details modal -->
+<div class="modal-overlay" id="clientOverlay">
+  <div class="modal client-theme">
+    <button class="modal-close" type="button" onclick="closeModal('client')" aria-label="Close">✕</button>
+    <div class="modal-icon green">💼</div>
+    <span class="modal-eyebrow green">BUSINESS / STARTUP</span>
+    <h3>Tell us about your build</h3>
+    <p class="sub">Fill this in and we'll open WhatsApp with your brief ready to send.</p>
+    <form id="clientForm" onsubmit="return sendToWhatsApp(event, 'client')">
+      <div class="field">
+        <label for="c-name">Full name</label>
+        <input id="c-name" type="text" placeholder="Your name" required>
+      </div>
+      <div class="field">
+        <label for="c-company">Business / company name</label>
+        <input id="c-company" type="text" placeholder="e.g. Choco Cube" required>
+      </div>
+      <div class="field">
+        <label>What do you need built?</label>
+        <div class="chip-picker green" id="ctypePicker">
+          <button type="button" class="chip" data-value="Landing page / website">Website</button>
+          <button type="button" class="chip" data-value="Full-stack app">Full-stack app</button>
+          <button type="button" class="chip" data-value="Internal tool">Internal tool</button>
+          <button type="button" class="chip" data-value="MVP / startup build">MVP / startup</button>
+          <button type="button" class="chip" data-value="Other">Other</button>
+        </div>
+        <div class="chip-other-wrap" id="ctypeOtherWrap">
+          <input id="c-type-other" type="text" placeholder="Tell us what you need built">
+        </div>
+      </div>
+      <div class="field">
+        <label>Budget range <span style="font-weight:400; color:var(--muted);">(optional)</span></label>
+        <div class="chip-picker green" id="budgetPicker">
+          <button type="button" class="chip" data-value="Under ₹10,000">Under ₹10k</button>
+          <button type="button" class="chip" data-value="₹10,000–₹25,000">₹10k–25k</button>
+          <button type="button" class="chip" data-value="₹25,000+">₹25k+</button>
+          <button type="button" class="chip" data-value="Not sure yet">Not sure yet</button>
+        </div>
+      </div>
+      <input type="hidden" id="c-type" required>
+      <input type="hidden" id="c-budget">
+      <div class="field">
+        <label for="c-brief">Brief requirements</label>
+        <textarea id="c-brief" placeholder="What should it do? Any deadline in mind?"></textarea>
+      </div>
+      <div class="field">
+        <label for="c-phone">Your WhatsApp number</label>
+        <input id="c-phone" type="tel" placeholder="e.g. 9876543210" required>
+      </div>
+      <button class="btn btn-wa modal-submit" type="submit">Send brief on WhatsApp →</button>
+      <p class="modal-note">Opens WhatsApp with your brief filled in — just hit send.</p>
+    </form>
+  </div>
+</div>
+
+<script>
+  function openModal(type){
+    document.getElementById(type + 'Overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(type){
+    document.getElementById(type + 'Overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.modal-overlay').forEach(function(overlay){
+    overlay.addEventListener('click', function(e){
+      if(e.target === overlay){
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      document.querySelectorAll('.modal-overlay.open').forEach(function(o){ o.classList.remove('open'); });
+      document.body.style.overflow = '';
+    }
+  });
+
+  var ZENVYRA_NUMBER = '916379376791';
+
+  function initChipPicker(pickerId, hiddenId, otherWrapId, otherInputId){
+    var picker = document.getElementById(pickerId);
+    var hidden = document.getElementById(hiddenId);
+    var otherWrap = otherWrapId ? document.getElementById(otherWrapId) : null;
+    var otherInput = otherInputId ? document.getElementById(otherInputId) : null;
+
+    picker.addEventListener('click', function(e){
+      var chip = e.target.closest('.chip');
+      if(!chip) return;
+      picker.querySelectorAll('.chip').forEach(function(c){ c.classList.remove('active'); });
+      chip.classList.add('active');
+      var val = chip.getAttribute('data-value');
+      if(val === 'Other' && otherWrap){
+        otherWrap.classList.add('show');
+        hidden.value = otherInput.value.trim();
+        otherInput.focus();
+      } else {
+        if(otherWrap) otherWrap.classList.remove('show');
+        hidden.value = val;
+      }
+    });
+    if(otherInput){
+      otherInput.addEventListener('input', function(){
+        if(otherWrap.classList.contains('show')){
+          hidden.value = otherInput.value.trim();
+        }
+      });
+    }
+  }
+
+  initChipPicker('deptPicker', 's-dept', 'deptOtherWrap', 's-dept-other');
+  initChipPicker('typePicker', 's-type');
+  initChipPicker('ctypePicker', 'c-type', 'ctypeOtherWrap', 'c-type-other');
+  initChipPicker('budgetPicker', 'c-budget');
+
+  function sendToWhatsApp(evt, type){
+    evt.preventDefault();
+    var lines = [];
+    var phone = '';
+
+    if(type === 'student'){
+      var name = document.getElementById('s-name').value.trim();
+      var college = document.getElementById('s-college').value.trim();
+      var dept = document.getElementById('s-dept').value.trim();
+      var ptype = document.getElementById('s-type').value.trim();
+      var topic = document.getElementById('s-topic').value.trim();
+      phone = document.getElementById('s-phone').value.trim();
+
+      if(!dept){
+        alert('Please select your department.');
+        return false;
+      }
+      if(!ptype){
+        alert('Please select a project type.');
+        return false;
+      }
+      lines.push('Hi Zenvyra, I\'d like to get a student project started.');
+      lines.push('Name: ' + name);
+      lines.push('College: ' + college);
+      lines.push('Department: ' + dept);
+      lines.push('Project type: ' + ptype);
+      if(topic){ lines.push('Topic: ' + topic); }
+      lines.push('My WhatsApp: ' + phone);
+    } else {
+      var cname = document.getElementById('c-name').value.trim();
+      var company = document.getElementById('c-company').value.trim();
+      var ctype = document.getElementById('c-type').value.trim();
+      var budget = document.getElementById('c-budget').value.trim();
+      var brief = document.getElementById('c-brief').value.trim();
+      phone = document.getElementById('c-phone').value.trim();
+
+      if(!ctype){
+        alert('Please select what you need built.');
+        return false;
+      }
+      lines.push('Hi Zenvyra, I\'d like to discuss a project.');
+      lines.push('Name: ' + cname);
+      lines.push('Business/company: ' + company);
+      lines.push('What I need: ' + ctype);
+      if(budget){ lines.push('Budget range: ' + budget); }
+      if(brief){ lines.push('Brief: ' + brief); }
+      lines.push('My WhatsApp: ' + phone);
+    }
+
+    var message = encodeURIComponent(lines.join('\n'));
+    var url = 'https://wa.me/' + ZENVYRA_NUMBER + '?text=' + message;
+    window.open(url, '_blank', 'noopener');
+    closeModal(type);
+    return false;
+  }
+</script>
 
 </body>
 </html>
