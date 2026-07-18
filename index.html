@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zenvyra Technologys — Projects, Built & Shipped</title>
+<title>Zenvyra Technologys</title>
+<link rel="icon" href="Zenvyra.jpg.png" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -37,7 +38,7 @@
   header{position:sticky; top:0; z-index:50; background:rgba(243,244,247,0.9); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-bottom:1px solid var(--line);}
   .nav{display:flex; align-items:center; justify-content:space-between; padding:18px 28px; max-width:1160px; margin:0 auto;}
   .brand{display:flex; align-items:center; gap:10px; font-family:'Sora'; font-weight:700; font-size:1.05rem;}
-  .brand .mark{width:26px; height:26px; border-radius:7px; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:800;}
+  .brand .mark{width:26px; height:26px; border-radius:7px; background:linear-gradient(135deg, var(--ink) 40%, var(--accent) 140%); color:#fff; display:flex; align-items:center; justify-content:center; font-size:0.8rem; font-weight:800;}
   .navlinks{display:flex; gap:30px; font-size:0.9rem; color:var(--muted);}
   .navlinks a:hover{color:var(--ink);}
   .navcta{display:flex; gap:10px;}
@@ -55,7 +56,12 @@
   @media (max-width:760px){ .navlinks{display:none;} }
 
   /* hero */
-  .hero{padding:96px 0 70px; position:relative;}
+  .hero{padding:96px 0 70px; position:relative; overflow:hidden;}
+  .hero-glow{position:absolute; z-index:0; border-radius:50%; filter:blur(70px); opacity:0.55; pointer-events:none;}
+  .hero-glow.g1{width:420px; height:420px; top:-160px; right:-120px; background:radial-gradient(circle at 30% 30%, #2F5CED, transparent 70%);}
+  .hero-glow.g2{width:300px; height:300px; bottom:-140px; left:-80px; background:radial-gradient(circle at 30% 30%, #25D366, transparent 70%); opacity:0.18;}
+  .hero-grid{position:absolute; inset:0; z-index:0; background-image:linear-gradient(to right, rgba(20,23,31,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(20,23,31,0.04) 1px, transparent 1px); background-size:44px 44px; -webkit-mask-image:radial-gradient(ellipse 900px 420px at 30% 20%, #000 40%, transparent 85%); mask-image:radial-gradient(ellipse 900px 420px at 30% 20%, #000 40%, transparent 85%);}
+  .hero .wrap{position:relative; z-index:1;}
   .eyebrow{
     display:inline-flex; align-items:center; gap:8px;
     font-family:'IBM Plex Mono'; font-size:0.76rem; color:var(--accent);
@@ -65,7 +71,7 @@
   @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,0.5);} 70%{box-shadow:0 0 0 7px rgba(22,163,74,0);} 100%{box-shadow:0 0 0 0 rgba(22,163,74,0);}}
 
   .hero h1{font-size:clamp(2.3rem,5.6vw,4.1rem); font-weight:800; max-width:760px; line-height:1.05;}
-  .hero h1 .u{color:var(--accent);}
+  .hero h1 .u{background:linear-gradient(100deg, var(--accent) 10%, #6D8CFF 55%, var(--accent) 100%); -webkit-background-clip:text; background-clip:text; color:transparent;}
   .hero p.lede{max-width:540px; margin-top:24px; color:var(--muted); font-size:1.08rem;}
   .hero-actions{display:flex; gap:14px; margin-top:36px; flex-wrap:wrap;}
   .hero-strip{display:flex; gap:26px; margin-top:54px; flex-wrap:wrap;}
@@ -80,11 +86,15 @@
   .sec-head p{color:var(--muted); margin-top:14px;}
 
   .audience-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
-  .aud-card{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:30px; transition:transform .18s ease, box-shadow .18s ease;}
+  .aud-card{position:relative; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:30px; transition:transform .18s ease, box-shadow .18s ease; overflow:hidden;}
+  .aud-card::before{content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, var(--accent), #6D8CFF); transform:scaleX(0); transform-origin:left; transition:transform .25s ease;}
   .aud-card:hover{transform:translateY(-4px); box-shadow:0 16px 32px rgba(20,23,31,0.06);}
+  .aud-card:hover::before{transform:scaleX(1);}
   .aud-card .num{font-family:'IBM Plex Mono'; font-size:0.78rem; color:var(--accent);}
   .aud-card h3{font-size:1.2rem; margin-top:14px;}
   .aud-card p{color:var(--muted); font-size:0.92rem; margin-top:10px;}
+  .branch-chips{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px;}
+  .branch-chips .chip{font-family:'IBM Plex Mono'; font-size:0.68rem; color:var(--accent); background:var(--accent-ink); padding:4px 9px; border-radius:6px;}
   @media (max-width:900px){ .audience-grid{grid-template-columns:1fr;} }
 
   /* ticket board */
@@ -119,7 +129,8 @@
   @media (max-width:800px){ .price-wrap{grid-template-columns:1fr;} .price-side:first-child{border-right:none; border-bottom:1px solid var(--line);} }
 
   /* contact */
-  .contact-panel{background:var(--ink); color:#fff; border-radius:20px; padding:56px; display:grid; grid-template-columns:1.1fr 1fr; gap:50px; align-items:center;}
+  .contact-panel{position:relative; background:var(--ink); color:#fff; border-radius:20px; padding:56px; display:grid; grid-template-columns:1.1fr 1fr; gap:50px; align-items:center; isolation:isolate;}
+  .contact-panel::before{content:''; position:absolute; z-index:-1; inset:-2px; border-radius:22px; background:linear-gradient(120deg, var(--accent), var(--wa), var(--accent)); opacity:0.35; filter:blur(18px);}
   .contact-panel h2{color:#fff; font-size:clamp(1.7rem,3.4vw,2.3rem);}
   .contact-panel p{color:#A7ADBB; margin-top:16px; max-width:420px;}
   .contact-methods{display:flex; flex-direction:column; gap:14px;}
@@ -135,6 +146,8 @@
 
   footer{padding:34px 0 46px;}
   .bottom-bar{display:flex; justify-content:space-between; align-items:center; font-size:0.82rem; color:var(--muted); flex-wrap:wrap; gap:12px;}
+  
+  .privacy-note{text-align:center; font-size:0.78rem; color:var(--muted); margin-top:28px;}
 
   ::selection{background:var(--accent); color:#fff;}
   @media (prefers-reduced-motion: reduce){ *{transition:none !important; animation:none !important;} }
@@ -157,6 +170,9 @@
 </header>
 
 <section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
   <div class="wrap">
     <div class="eyebrow"><span class="pulse"></span> OPEN FOR NEW PROJECTS</div>
     <h1>Student projects. Client builds. <span class="u">Same standard.</span></h1>
@@ -184,7 +200,14 @@
       <div class="aud-card">
         <div class="num">01</div>
         <h3>Students</h3>
-        <p>Final year and mini projects across CS, IT, and ECE — built, documented, and defended with you.</p>
+        <p>Final year and mini projects, built, documented, and defended with you.</p>
+        <div class="branch-chips">
+          <span class="chip">CSE</span>
+          <span class="chip">IT</span>
+          <span class="chip">CSD</span>
+          <span class="chip">AIML</span>
+          <span class="chip">ECE</span>
+        </div>
       </div>
       <div class="aud-card">
         <div class="num">02</div>
@@ -303,6 +326,8 @@
       </div>
     </div>
   </div>
+  <div>
+    <p class="privacy-note">We respect your privacy. Your contact info is only used to reply to your inquiry.</p>
 </section>
 
 <footer>
